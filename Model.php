@@ -1,7 +1,6 @@
 <?php
 
-namespace app\core;
-
+namespace Kema\Kema;
 
 class Model
 {
@@ -23,12 +22,7 @@ class Model
         }
     }
 
-    public function attributes()
-    {
-        return [];
-    }
-
-    public function labels()
+    public function attributes(): array
     {
         return [];
     }
@@ -38,12 +32,12 @@ class Model
         return $this->labels()[$attribute] ?? $attribute;
     }
 
-    public function rules()
+    public function labels(): array
     {
         return [];
     }
 
-    public function validate()
+    public function validate(): bool
     {
         foreach ($this->rules() as $attribute => $rules) {
             $value = $this->{$attribute};
@@ -85,21 +79,9 @@ class Model
         return empty($this->errors);
     }
 
-    public function errorMessages()
+    public function rules(): array
     {
-        return [
-            self::RULE_REQUIRED => 'This field is required',
-            self::RULE_EMAIL => 'This field must be valid email address',
-            self::RULE_MIN => 'Min length of this field must be {min}',
-            self::RULE_MAX => 'Max length of this field must be {max}',
-            self::RULE_MATCH => 'This field must be the same as {match}',
-            self::RULE_UNIQUE => 'Record with with this {field} already exists',
-        ];
-    }
-
-    public function errorMessage($rule)
-    {
-        return $this->errorMessages()[$rule];
+        return [];
     }
 
     protected function addErrorByRule(string $attribute, string $rule, $params = [])
@@ -110,6 +92,23 @@ class Model
             $errorMessage = str_replace("{{$key}}", $value, $errorMessage);
         }
         $this->errors[$attribute][] = $errorMessage;
+    }
+
+    public function errorMessage($rule): string
+    {
+        return $this->errorMessages()[$rule];
+    }
+
+    public function errorMessages(): array
+    {
+        return [
+            self::RULE_REQUIRED => 'This field is required',
+            self::RULE_EMAIL => 'This field must be valid email address',
+            self::RULE_MIN => 'Min length of this field must be {min}',
+            self::RULE_MAX => 'Max length of this field must be {max}',
+            self::RULE_MATCH => 'This field must be the same as {match}',
+            self::RULE_UNIQUE => 'Record with with this {field} already exists',
+        ];
     }
 
     public function addError(string $attribute, string $message)

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
+namespace Kema\Kema\db;
 
-use app\core\Application;
+use Kema\Kema\Application;
 use PDO;
 use PDOStatement;
 

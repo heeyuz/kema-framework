@@ -12,5 +12,7 @@
             "email": "yunusalikhakimjanovich@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core\db;
+namespace Kema\Kema\db;
 
-use app\core\Application;
-use app\core\Model;
+use Kema\Kema\Application;
+use Kema\Kema\Model;
 use PDOStatement;
 
 abstract class DbModel extends Model

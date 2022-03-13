@@ -1,12 +1,12 @@
 <?php
 
-namespace app\core;
+namespace Kema\Kema;
 
 class View
 {
     public string $title = '';
 
-    public function renderView($view, array $params)
+    public function renderView($view, array $params): array|bool|string
     {
         $layoutName = Application::$app->layout;
         if (Application::$app->controller) {
@@ -19,7 +19,7 @@ class View
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
 
-    public function renderViewOnly($view, array $params)
+    public function renderViewOnly($view, array $params): bool|string
     {
         foreach ($params as $key => $value) {
             $$key = $value;

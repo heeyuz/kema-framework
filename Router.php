@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace Kema\Kema;
 
-use app\core\exception\NotFoundException;
+use Kema\Kema\exception\NotFoundException;
 
 class Router
 {

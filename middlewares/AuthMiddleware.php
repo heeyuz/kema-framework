@@ -1,10 +1,10 @@
 <?php
 
-namespace app\core\middlewares;
+namespace Kema\Kema\middlewares;
 
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use Kema\Kema\Application;
+use Kema\Kema\exception\ForbiddenException;
 
 class AuthMiddleware extends BaseMiddleware
 {

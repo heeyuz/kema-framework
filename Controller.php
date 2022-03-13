@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace Kema\Kema;
 
-use app\core\middlewares\BaseMiddleware;
+use Kema\Kema\middlewares\BaseMiddleware;
 
 class Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\form;
+namespace Kema\Kema\form;
 
-use app\core\Model;
+use Kema\Kema\Model;
 
 abstract class BaseField
 {

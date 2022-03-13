@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\middlewares;
+namespace Kema\Kema\middlewares;
 
 abstract class BaseMiddleware
 {

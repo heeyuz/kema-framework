@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace Kema\Kema;
 
-use app\core\db\Database;
+use Kema\Kema\db\Database;
 use Exception;
 
 class Application

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace Kema\Kema;
 
-use app\core\db\DbModel;
+use Kema\Kema\db\DbModel;
 
 abstract class UserModel extends DbModel
 {
