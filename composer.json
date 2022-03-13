@@ -1,18 +1,19 @@
 {
-    "name": "kema/kema",
-    "description": "The minimalistic php framework",
-    "autoload": {
-        "psr-4": {
-            "Kema\\Kema\\": "./"
-        }
-    },
-    "authors": [
-        {
-            "name": "Yunusali",
-            "email": "yunusalikhakimjanovich@gmail.com"
-        }
-    ],
-    "require": {
-        "ext-pdo": "*"
+  "name": "kema/kema",
+  "description": "The minimalistic php framework",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Kema\\Kema\\": "./"
     }
+  },
+  "authors": [
+    {
+      "name": "Yunusali",
+      "email": "yunusalikhakimjanovich@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*"
+  }
 }
